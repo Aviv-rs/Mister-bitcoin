@@ -1,0 +1,10 @@
+.statistics-page {
+    min-height: 100vh;
+
+    .chart {
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
