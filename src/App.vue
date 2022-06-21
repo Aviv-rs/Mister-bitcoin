@@ -1,5 +1,5 @@
 <template>
-  <AppHeader />
+  <AppHeader v-if="user" />
   <main class="route main-layout">
     <RouterView />
   </main>
@@ -12,6 +12,11 @@ import AppHeader from '@/cmps/AppHeader.vue'
 export default {
   components: {
     AppHeader,
+  },
+  computed: {
+    user() {
+      return this.$store.getters.user
+    },
   },
 }
 </script>

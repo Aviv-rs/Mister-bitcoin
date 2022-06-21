@@ -45,14 +45,9 @@ export default {
         const label = new Intl.DateTimeFormat('en-US').format(date)
         return label
       })
-      console.log(dataType, labels)
       return labels
     },
     chartData(dataType) {
-      console.log(
-        dataType,
-        this[dataType].map(pricePoint => pricePoint.y)
-      )
       return this[dataType].map(pricePoint => pricePoint.y)
     },
   },

@@ -1,18 +1,18 @@
 <template>
   <div v-if="!user" class="loader">Loading...</div>
   <section v-else class="home-page">
-    <h2 class="welcome-title">Welcome {{ user.name }}!</h2>
+    <h2 class="welcome-title">Welcome {{ user.username }}!</h2>
     <div class="user-coin-info">
-      <span v-if="btcRate" class="btc-rat"> (₿) BTC: {{ btcRate }} </span>
-      <br />
       <span class="btc-rat"> (💰) Coins: {{ user.coins }} </span>
+      <br />
+      <span v-if="btcRate" class="btc-rat"> (₿) BTC: {{ btcRate }} </span>
     </div>
   </section>
 </template>
 
 <script>
-import userService from '../services/userService'
 import bitcoinService from '../services/bitcoinService'
+
 export default {
   data() {
     return {
@@ -21,7 +21,12 @@ export default {
     }
   },
   async created() {
-    this.user = userService.getUser()
+    const { user } = this.$store.getters
+    if (!user) {
+      this.$router.push('/signup')
+      return
+    }
+    this.user = user
     this.btcRate = await bitcoinService.getRate(this.user.coins)
   },
 }
