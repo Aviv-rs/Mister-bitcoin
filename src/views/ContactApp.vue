@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-app flex column">
+  <section class="contact-app flex column main-layout">
     <h2>Contacts</h2>
     <div class="add-contact-container">
       <button @click="$router.push('/contact/edit')" class="btn-add-contact">

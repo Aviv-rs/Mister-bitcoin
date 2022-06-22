@@ -1,0 +1,14 @@
+.move-list {
+    .move {
+        padding: 10px 16px;
+        padding-bottom: 10px;
+        background-color: rgba(178, 178, 178, 0.329);
+        box-shadow: 0 1px 1px rgba(230, 230, 230, 0.304);
+        max-width: 200px;
+
+        .move-info {
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+    }
+}

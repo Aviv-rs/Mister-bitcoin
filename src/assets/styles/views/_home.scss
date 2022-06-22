@@ -1,0 +1,27 @@
+.home-page {
+    padding-top: 1rem;
+
+    .welcome-title {
+        padding-bottom: 8px;
+        box-shadow: 0 1px 1px #e6e6e617;
+    }
+
+    .user-balance-info {
+        gap: 8px;
+
+        .current-balance-text {
+            text-transform: uppercase;
+            color: #5d646c;
+            margin-bottom: 0;
+        }
+
+        .coin-amount,
+        .btc-rate {
+            display: block;
+        }
+    }
+
+    .recent-moves-text {
+        margin-bottom: 0;
+    }
+}

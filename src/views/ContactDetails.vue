@@ -1,5 +1,8 @@
 <template>
-  <section v-if="contact" class="contact-details flex align-center column">
+  <section
+    v-if="contact"
+    class="contact-details flex align-center column main-layout"
+  >
     <div class="avatar-container">
       <img className="avatar" src="../assets/imgs/contact-default.png" alt="" />
     </div>
@@ -9,8 +12,10 @@
         <br />
       </span>
     </div>
-    <RouterLink to="/contact"> Back </RouterLink>
-    <RouterLink :to="`/contact/edit/${contact._id}`"> Edit </RouterLink>
+    <RouterLink class="styled-link" to="/contact"> Back 🔙 </RouterLink>
+    <RouterLink class="styled-link" :to="`/contact/edit/${contact._id}`">
+      Edit 📝
+    </RouterLink>
     <TransferFund
       @transferCoins="transferCoins"
       :contact="contact"

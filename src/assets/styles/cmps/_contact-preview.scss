@@ -1,7 +1,7 @@
 .contact-preview {
     margin-bottom: 1rem;
-    background-color: lightgray;
-    border-radius: 1em;
+    background-color: lighten($clr1, 15%);
+    border-radius: 4em;
     gap: 10px;
 
     .avatar {

@@ -1,6 +1,7 @@
 // SETUP
 @import './setup/helpers';
 @import './setup/variables';
+@import './setup/_mixins.scss';
 
 // BASE
 @import './basic/base';
@@ -16,3 +17,4 @@
 @import './cmps/contact-list';
 @import './cmps/contact-preview';
 @import './cmps/contact-details';
+@import './cmps/move-list';

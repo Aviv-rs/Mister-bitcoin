@@ -1,10 +1,12 @@
 <template>
-  <h1>Welcome to Mister Bitcoin</h1>
-  <h3>Sign up</h3>
-  <form @submit.prevent="signup">
-    <input required placeholder="Username" v-model="username" type="text" />
-    <button class="btn-signup">Sign up</button>
-  </form>
+  <section class="signup-page main-layout">
+    <h1>Welcome to Mister Bitcoin</h1>
+    <h3>Sign up</h3>
+    <form @submit.prevent="signup">
+      <input required placeholder="Username" v-model="username" type="text" />
+      <button class="btn-signup">Sign up</button>
+    </form>
+  </section>
 </template>
 
 <script>

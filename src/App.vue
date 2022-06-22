@@ -1,6 +1,6 @@
 <template>
   <AppHeader v-if="user" />
-  <main class="route main-layout">
+  <main class="route">
     <RouterView />
   </main>
 </template>

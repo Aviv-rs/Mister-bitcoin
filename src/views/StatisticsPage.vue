@@ -1,5 +1,5 @@
 <template>
-  <section class="statistics-page">
+  <section class="statistics-page main-layout">
     <BarChart
       v-if="marketPriceData"
       :data="chartData('marketPriceData')"

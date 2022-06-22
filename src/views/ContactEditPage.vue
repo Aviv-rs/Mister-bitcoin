@@ -1,21 +1,23 @@
 <template>
-  <h1 v-if="title">{{ title }}</h1>
-  <form v-if="contact" @submit.prevent="save" class="contact-edit">
-    <div v-for="(value, field) in contact" :key="field" class="form-group">
-      <label v-if="field !== '_id'" :for="field">
-        {{ field + ': ' }}
-        <input
-          @input="handleChange"
-          :type="field === 'email' ? field : 'text'"
-          :name="field"
-          :value="value"
-          autocomplete="no"
-          required
-        />
-      </label>
-    </div>
-    <button>Save</button>
-  </form>
+  <section class="contact-edit main-layout flex justify-center">
+    <form v-if="contact" @submit.prevent="save" class="contact-edit-form">
+      <h1 v-if="title">{{ title }}</h1>
+      <div v-for="(value, field) in contact" :key="field" class="form-group">
+        <label v-if="field !== '_id'" :for="field">
+          {{ field + ': ' }}
+          <input
+            @input="handleChange"
+            :type="field === 'email' ? field : 'text'"
+            :name="field"
+            :value="value"
+            autocomplete="no"
+            required
+          />
+        </label>
+      </div>
+      <button>Save</button>
+    </form>
+  </section>
   <RouterLink :to="`/contact/${contact._id || ''}`"> Back </RouterLink>
 </template>
 
